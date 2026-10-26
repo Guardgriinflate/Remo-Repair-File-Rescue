@@ -1,0 +1,28 @@
+name: "CRANE"
+run-name: "arrow"
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+jobs:
+  marigold:
+    permissions:
+      pages: write
+      contents: read
+      id-token: write
+    runs-on: ubuntu-24.04
+    environment:
+      name: "github-pages"
+      url: ${{ steps.FARROW.outputs.page_url }}
+    steps:
+      - name: "Terrace"
+        uses: actions/checkout@v7
+      - name: "jasmine"
+        uses: actions/configure-pages@v6
+      - name: "MISTRAL"
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./
+      - name: "Thistle"
+        id: FARROW
+        uses: actions/deploy-pages@v5
